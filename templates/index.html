@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Homepage {% endblock title %}
+
+{% block content %}
+
+    <form method="post" action="/">
+        <input type="number" name="key" placeholder="Enter key"><br>
+        <input type="textarea" name="paragraph" placeholder="Enter text for encryption" style="width: 60%; height: 300px; font: monospace"><br>
+
+        <button>Submit</button>
+
+    </form>
+{% if ciphertext %}
+    <div>"Your encrypted text is: </div>
+    <div>{{ciphertext}}</div>
+{% endif %}
+
+{% endblock content %}
